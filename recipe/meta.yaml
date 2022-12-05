@@ -1,5 +1,5 @@
 {% set name = "pogo" %}
-{% set version = "9.8.0" %}
+{% set version = "9.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.com/tango-controls/pogo/-/archive/{{ version }}/pogo-{{ version }}.tar.gz
-  sha256: f0bff615f4d670f9a136352fd33c639b1685a7631a7251e6d971c5f4eccf3b44
+  sha256: 251f9882f6c1d8fcca68993c0a0fdae3691895f229645da227948e419170566e
 
 build:
   number: 0
@@ -36,7 +36,7 @@ about:
   license_file:
     - LICENSE
     - aggregate-third-party-report.html
-  summary: 'GUI application for generating Tango projects'
+  summary: GUI application for generating Tango projects
   description: |
     Pogo is the TANGO code generator.
     Tango-Controls is a software toolkit for building control systems.
