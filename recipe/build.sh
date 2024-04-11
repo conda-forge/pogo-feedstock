@@ -1,5 +1,3 @@
-cd fr.esrf.tango.pogo.parent
-
 # Update the version in pom files (remove SNAPSHOT)
 mvn versions:set versions:update-child-modules -DnewVersion="${PKG_VERSION}" -DprocessAllModule -DgenerateBackupPoms=false -Prelease
 # Skip the tests because they require to have a tango database running
@@ -12,7 +10,7 @@ cp target/site/aggregate-third-party-report.html ..
 cd ..
 
 mkdir -p ${PREFIX}/share/java ${PREFIX}/bin
-install -m 0644 org.tango.pogo.pogo_gui/target/Pogo-${PKG_VERSION}.jar ${PREFIX}/share/java
+install -m 0644 org.tango.pogo.gui/target/Pogo-${PKG_VERSION}.jar ${PREFIX}/share/java
 ln -s Pogo-${PKG_VERSION}.jar ${PREFIX}/share/java/Pogo.jar
 
 # Install pogo preferences
@@ -30,6 +28,6 @@ POGO_CLASS=${PREFIX}/share/java/Pogo.jar
 
 export CLASSPATH=\$POGO_PREFERENCES:\$POGO_CLASS
 
-java org.tango.pogo.pogo_gui.Pogo "\$@"
+java org.tango.pogo.gui.Pogo "\$@"
 EOF
 chmod a+x $PREFIX/bin/pogo
