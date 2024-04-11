@@ -14,11 +14,11 @@ build:
 
 requirements:
   build:
-    - openjdk 11
+    - openjdk 17
     - maven
     - sed  # [osx]
   run:
-    - openjdk >=11,<16a0
+    - openjdk >=17
 
 test:
   commands:
