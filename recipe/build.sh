@@ -11,7 +11,7 @@ cp target/site/aggregate-third-party-report.html ..
 
 cd ..
 
-mkdir -p ${PREFIX}/share/java
+mkdir -p ${PREFIX}/share/java ${PREFIX}/bin
 install -m 0644 org.tango.pogo.pogo_gui/target/Pogo-${PKG_VERSION}.jar ${PREFIX}/share/java
 ln -s Pogo-${PKG_VERSION}.jar ${PREFIX}/share/java/Pogo.jar
 
