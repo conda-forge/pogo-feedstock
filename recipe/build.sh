@@ -5,9 +5,7 @@ mvn install -DskipTests
 
 # Generate third party license report
 mvn license:aggregate-third-party-report
-cp target/site/aggregate-third-party-report.html ..
-
-cd ..
+cp target/site/aggregate-third-party-report.html .
 
 mkdir -p ${PREFIX}/share/java ${PREFIX}/bin
 install -m 0644 org.tango.pogo.gui/target/Pogo-${PKG_VERSION}.jar ${PREFIX}/share/java
