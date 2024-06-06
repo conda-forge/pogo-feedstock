@@ -1,5 +1,5 @@
 {% set name = "pogo" %}
-{% set version = "9.9.0" %}
+{% set version = "9.9.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.com/tango-controls/pogo/-/archive/{{ version }}/pogo-{{ version }}.tar.gz
-  sha256: dad9ec461d97737588fb0e9eebc91ac953bdf308d55de0b6b4dada208dd4456d
+  sha256: 76cc749a51b4d8ae1af73aac9ec55bb3cb2e16e33d60bb2aeccca4bf544456d3
 
 build:
   number: 0
