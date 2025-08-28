@@ -25,21 +25,14 @@ requirements:
     - openjdk >=17,<22
 
 tests:
-  - script:
-      - if: unix
-        then: test -f ${PREFIX}/share/java/Pogo.jar
-      - if: unix
-        then: test -f ${PREFIX}/share/java/Pogo-${PKG_VERSION}.jar
-      - if: unix
-        then: test -f ${PREFIX}/share/pogo/preferences/Pogo.site_properties
-      - if: unix
-        then: test -f ${PREFIX}/bin/pogo
-      - if: win
-        then: if not exist %PREFIX%\share\java\Pogo.jar exit 1
-      - if: win
-        then: if not exist %PREFIX%\share\pogo\preferences\Pogo.site_properties exit 1
-      - if: win
-        then: if not exist %PREFIX%\Scripts\pogo.bat exit 1
+  - package_contents:
+      files:
+        - share/java/Pogo.jar
+        - share/java/Pogo-${{ version }}.jar
+        - share/pogo/preferences/Pogo.site_properties
+        - if: win
+          then: Scripts/pogo.bat
+          else: bin/pogo
 
 about:
   license: GPL-3.0-or-later
