@@ -28,7 +28,9 @@ tests:
   - package_contents:
       files:
         - share/java/Pogo.jar
-        - share/java/Pogo-${{ version }}.jar
+        # On unix we create a symlink but on windows we rename the file
+        - if: unix
+          then: share/java/Pogo-${{ version }}.jar
         - share/pogo/preferences/Pogo.site_properties
         - if: win
           then: Scripts/pogo.bat
