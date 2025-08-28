@@ -45,7 +45,7 @@ about:
     Tango-Controls is a software toolkit for building control systems.
   homepage: https://www.tango-controls.org
   repository: https://gitlab.com/tango-controls/pogo
-  documentation: https://tango-controls.readthedocs.io/en/latest/tools-and-extensions/built-in/pogo/index.html
+  documentation: https://tango-controls.readthedocs.io/en/latest/tools/pogo.html
 
 extra:
   recipe-maintainers:
