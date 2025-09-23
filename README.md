@@ -3,7 +3,7 @@ About pogo-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pogo-feedstock/blob/main/LICENSE.txt)
 
-Home: https://www.tango-controls.org
+Home: https://www.tango-controls.org/
 
 Package license: GPL-3.0-or-later
 
@@ -11,11 +11,10 @@ Summary: GUI application for generating Tango projects
 
 Development: https://gitlab.com/tango-controls/pogo
 
-Documentation: https://tango-controls.readthedocs.io/en/latest/tools-and-extensions/built-in/pogo/index.html
+Documentation: https://tango-controls.readthedocs.io/en/latest/tools/pogo.html
 
 Pogo is the TANGO code generator.
 Tango-Controls is a software toolkit for building control systems.
-
 
 Current build status
 ====================

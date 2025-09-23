@@ -1,0 +1,55 @@
+schema_version: 1
+
+context:
+  name: pogo
+  version: 9.10.5
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://gitlab.com/tango-controls/pogo/-/archive/${{ version }}/pogo-${{ version }}.tar.gz
+  sha256: cc6a1f9985c2c9e37cacdce9e32179d0d6aed443e3944f65378358cd0156cd1e
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - openjdk 17.*
+    - maven
+    - if: osx
+      then: sed
+  run:
+    - openjdk >=17,<22
+
+tests:
+  - package_contents:
+      files:
+        - share/java/Pogo.jar
+        # On unix we create a symlink but on windows we rename the file
+        - if: unix
+          then: share/java/Pogo-${{ version }}.jar
+        - share/pogo/preferences/Pogo.site_properties
+        - if: win
+          then: Scripts/pogo.bat
+          else: bin/pogo
+
+about:
+  license: GPL-3.0-or-later
+  license_file:
+    - LICENSE
+    - aggregate-third-party-report.html
+  summary: GUI application for generating Tango projects
+  description: |
+    Pogo is the TANGO code generator.
+    Tango-Controls is a software toolkit for building control systems.
+  homepage: https://www.tango-controls.org
+  repository: https://gitlab.com/tango-controls/pogo
+  documentation: https://tango-controls.readthedocs.io/en/latest/tools/pogo.html
+
+extra:
+  recipe-maintainers:
+    - beenje
+    - dlacoste-esrf
