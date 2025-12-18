@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pogo
-  version: 9.10.5
+  version: "9.10.6"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://gitlab.com/tango-controls/pogo/-/archive/${{ version }}/pogo-${{ version }}.tar.gz
-  sha256: cc6a1f9985c2c9e37cacdce9e32179d0d6aed443e3944f65378358cd0156cd1e
+  sha256: 68a55e291b56eeb2c0338f20d670be29c76be097f98e4c0b611b26df942fce0d
 
 build:
   number: 0
